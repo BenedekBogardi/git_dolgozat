@@ -4,6 +4,7 @@ function szamInput() {
     var szam = document.getElementById("bemenet").value;
     szamok.push(szam);
     kiirat();
+    legkisebb();
 }
 
 function kiirat() {
@@ -12,4 +13,16 @@ function kiirat() {
         s += szamok[i]+", ";
     }
     document.getElementById("text").innerHTML = s;
+}
+
+function legkisebb() {
+    var a = 10000000;
+    for(var i = 0; i < szamok.length; i++)
+    {
+        if(szamok[i] < a)
+        {
+            a = szamok[i];
+        }
+    }
+    document.getElementById("lk").innerHTML = a;
 }
