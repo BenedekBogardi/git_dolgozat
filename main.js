@@ -16,10 +16,10 @@ function kiirat() {
 }
 
 function legkisebb() {
-    var a = 10000000;
+    var a = 0;
     for(var i = 0; i < szamok.length; i++)
     {
-        if(szamok[i] < a)
+        if(szamok[i] > a)
         {
             a = szamok[i];
         }
